@@ -22,6 +22,9 @@
             <li>
                 <a href="#projects">Projetos</a>
             </li>
+            <li>
+                <a href="#contact">Contato</a>
+            </li>
         </ul>
     </nav>
     <!-- Inicio do Main -->
@@ -115,89 +118,139 @@
             <p>Conheça alguns dos meus trabalhos recentes!</p>
         </div>
         
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/netflix.png" alt="Projeto 5">
-                    <div class="project-overlay">
-                        <a href="https://github.com/carolinneVictoria/imersao-frontend-netflix" class="project-link">Ver Projeto</a>
+        <div class="carousel-container">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="projects-carousel">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/netflix.png" alt="Projeto 5">
+                        <div class="project-overlay">
+                            <a href="https://github.com/carolinneVictoria/imersao-frontend-netflix" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Netflix</h3>
+                        <p>Projeto desenvolvido durante a Imersão Front-End da Alura com o objetivo de recriar a interface de seleção de perfis da Netflix com uso de HTML, CSS e JavaScript com complemento do Github Copilot.</p>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>Netflix</h3>
-                    <p>Projeto desenvolvido durante a Imersão Front-End da Alura com o objetivo de recriar a interface de seleção de perfis da Netflix com uso de HTML, CSS e JavaScript com complemento do Github Copilot.</p>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/todolist.png" alt="Projeto 1">
-                    <div class="project-overlay">
-                        <a href="https://github.com/carolinneVictoria/todo-app-javascript" class="project-link">Ver Projeto</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/todolist.png" alt="Projeto 1">
+                        <div class="project-overlay">
+                            <a href="https://github.com/carolinneVictoria/todo-app-javascript" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>To Do List</h3>
+                        <p>Aplicação simples de lista de tarefas desenvolvida com HTML, CSS e JavaScript, com persistência de dados no navegador.</p>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>To Do List</h3>
-                    <p>Aplicação simples de lista de tarefas desenvolvida com HTML, CSS e JavaScript, com persistência de dados no navegador.</p>
-                </div>
-            </div>
 
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/sistemaespecialista.png" alt="Projeto 3">
-                    <div class="project-overlay">
-                        <a href="https://github.com/carolinneVictoria/Sistema_Especialista" class="project-link">Ver Projeto</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/sistemaespecialista.png" alt="Projeto 3">
+                        <div class="project-overlay">
+                            <a href="https://github.com/carolinneVictoria/Sistema_Especialista" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema Especialista</h3>
+                        <p>Este projeto consiste no desenvolvimento de um sistema especialista com PyMc baseado em redes bayesianas para apoiar a tomada de decisão na aplicação de fungicidas na cultura da soja com uso de Python e Flask.</p>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>Sistema Especialista</h3>
-                    <p>Este projeto consiste no desenvolvimento de um sistema especialista com PyMc baseado em redes bayesianas para apoiar a tomada de decisão na aplicação de fungicidas na cultura da soja com uso de Python e Flask.</p>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/calculadora.png" alt="Projeto 2">
-                    <div class="project-overlay">
-                        <a href="https://github.com/carolinneVictoria/imc-calculator" class="project-link">Ver Projeto</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/calculadora.png" alt="Projeto 2">
+                        <div class="project-overlay">
+                            <a href="https://github.com/carolinneVictoria/imc-calculator" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Calculadora de IMC</h3>
+                        <p>Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A aplicação permite calcular o Índice de Massa Corporal (IMC) a partir da altura e peso informados pelo usuário.</p>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>Calculadora de IMC</h3>
-                    <p>Este projeto foi desenvolvido utilizando HTML, CSS e JavaScript. A aplicação permite calcular o Índice de Massa Corporal (IMC) a partir da altura e peso informados pelo usuário.</p>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/gestao.png" alt="Projeto 4">
-                    <div class="project-overlay">
-                        <a href="https://github.com/carolinneVictoria/Projeto_Extensao" class="project-link">Ver Projeto</a>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/gestao.png" alt="Projeto 4">
+                        <div class="project-overlay">
+                            <a href="https://github.com/carolinneVictoria/Projeto_Extensao" class="project-link">Ver Projeto</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sistema de Gestão Bicicletaria</h3>
+                        <p>O projeto consiste no desenvolvimento de um sistema web para gestão de uma bicicletaria, com o objetivo de facilitar o controle das principais operações do negócio. A aplicação é construída em PHP, utilizando o padrão de arquitetura MVC.</p>
                     </div>
                 </div>
-                <div class="project-info">
-                    <h3>Sistema de Gestão Bicicletaria</h3>
-                    <p>O projeto consiste no desenvolvimento de um sistema web para gestão de uma bicicletaria, com o objetivo de facilitar o controle das principais operações do negócio. A aplicação é construída em PHP, utilizando o padrão de arquitetura MVC.</p>
-                </div>
-            </div>
 
-
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/programas.jpg" alt="Projeto 6">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">Ver Projeto</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>Projeto 6</h3>
-                    <p>Descrição do seu projeto aqui. Tecnologias utilizadas: Next.js, PostgreSQL</p>
-                </div>
             </div>
+            
+            <button class="carousel-btn next" onclick="moveCarousel(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
 
         <a href="mailto:carolinevictoria1224@email.com" class="cta-button">Faça um Orçamento</a>
+    </section>
+
+    <!-- Area de Contato -->
+    <section class="contact" id="contact">
+        <div class="contact-header">
+            <h2>Entre em Contato</h2>
+            <p>Tem uma ideia de projeto? Vamos conversar!</p>
+        </div>
+
+        <div class="contact-container">
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Assunto</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:carolinevictoria1224@email.com">carolinevictoria1224@email.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/carolinne-victória-5b79a3236/" target="_blank">Meu LinkedIn</a></p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/carolinneVictoria" target="_blank">Meu GitHub</a></p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Area do Rodape -->

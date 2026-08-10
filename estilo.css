@@ -600,8 +600,33 @@ html{
     box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
 }
 
+.submit-btn:disabled{
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
 .submit-btn:active{
     transform: scale(0.98);
+}
+
+.form-status{
+    min-height: 20px;
+    font-size: 14px;
+    margin-top: 4px;
+    color: #a7a7a7;
+}
+
+.form-status.sending{
+    color: #fbbf24;
+}
+
+.form-status.success{
+    color: #4ade80;
+}
+
+.form-status.error{
+    color: #f87171;
 }
 
 .contact-info{

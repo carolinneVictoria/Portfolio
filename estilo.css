@@ -7,13 +7,16 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a;
+    color: #e2e8f0;
 }
 html{
     scroll-behavior: smooth;
 }
 /*Header*/
 .nav{
-    background-color: #fffff8;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
     height: 70px;
     width: 100%;
     display: flex;
@@ -26,6 +29,7 @@ html{
 }
 .nav h1{
     font-size: 24px;
+    color: #f8fafc;
 }
 .nav-list{
     display: flex;
@@ -35,25 +39,27 @@ html{
 }
 .nav-list a{
     text-decoration: none;
-    color: #171717;
-    font-size: 20px;
-    padding: 20px;
-    transition: 0.5s;
+    color: #cbd5e1;
+    font-size: 18px;
+    padding: 12px 16px;
+    transition: 0.3s ease;
+    border-radius: 999px;
 }
 .nav-list a:hover{
-    font-weight: bold;
-    transform: scale(1.1);
+    color: #ffffff;
+    background: rgba(168, 85, 247, 0.2);
+    transform: translateY(-2px);
 }
 /* Main */
 .main{
     width: 100%;
-    background-color: #171717;
-    height: calc(100vh - 70px);
+    background: radial-gradient(circle at top left, #312e81 0%, #111827 45%, #020617 100%);
+    min-height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 60px 24px;
 }
 .pet {
     margin-bottom: 15px;
@@ -80,9 +86,26 @@ html{
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
+.hero-badge{
+    display: block;
+    width: fit-content;
+    margin: 0 auto 16px auto;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #c4b5fd;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .main h1{
     color: #ffffff;
-    font-size: 48px;    
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 8px;
 }
 .nome {
     background: linear-gradient(270deg, #a855f7, #ec4899, #3b82f6);
@@ -97,64 +120,76 @@ html{
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-.main p{
+.hero-subtitle{
     font-size: 18px;
     font-style: italic;
-    color: #a7a7a7;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    color: #cbd5e1;
+    margin-top: 12px;
+    margin-bottom: 28px;
     text-align: center;
+}
+
+.hero-actions{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
 }
 .call-to-action{
     cursor: pointer;
-    background-color: #0a66c2;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
     color: white;
     border: 0;
-    padding: 12px;
+    padding: 12px 18px;
     border-radius: 50px;
     font-size: 16px;
     font-weight: bold;
-    transition: 0.9s;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.25);
 }
 .call-to-action-two{
     cursor: pointer;
     background-color: #ffffff;
+    color: #111827;
     border: 0;
-    padding: 14px;
+    padding: 14px 20px;
     border-radius: 50px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    transition: 0.9s;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 24px rgba(255, 255, 255, 0.12);
 }
-.call-to-action:hover{
-    transform: scale(1.1);
-}
+.call-to-action:hover,
 .call-to-action-two:hover{
-    transform: scale(1.1);
+    transform: translateY(-3px) scale(1.02);
 }
-.main a{
+.hero-actions a{
     text-decoration: none;
     color: #181818;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 .social-icons {
-    margin-top: 20px;
+    margin-top: 24px;
     display: flex;
     gap: 20px;
 }
 
 .social-icons a {
     font-size: 28px;
-    color: #6b6b6b;
+    color: #94a3b8;
     transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
 }
 
 .social-icons a:hover {
-    color: #a855f7;
+    color: #ffffff;
     transform: translateY(-5px) scale(1.1);
+    background: rgba(168, 85, 247, 0.25);
 }
 
 .social-icons a:nth-child(1):hover {
@@ -170,7 +205,7 @@ html{
 }
 /*About*/
 .about{
-    background: linear-gradient(135deg, #f5f3ff 0%, #faf8ff 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
@@ -211,7 +246,7 @@ html{
 .about-content h2{
     font-size: 36px;
     margin-bottom: 20px;
-    color: #171717;
+    color: #111827;
 }
 
 .intro-text{
@@ -237,13 +272,13 @@ html{
 
 .skill-card{
     background-color: #fff;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
     padding: 20px 12px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
 }
 
 .skill-card:hover{
@@ -296,7 +331,7 @@ html{
     align-items: center;
     justify-content: center;
     padding: 60px 10%;
-    background: linear-gradient(135deg, #fffbf5 0%, #fff9f2 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #f5f3ff 100%);
     position: relative;
 }
 
@@ -328,13 +363,13 @@ html{
 .projects-header h2{
     font-size: 36px;
     margin-bottom: 15px;
-    color: #171717;
+    color: #111827;
     font-weight: 600;
 }
 
 .projects-header p{
     font-size: 16px;
-    color: #666;
+    color: #64748b;
     margin: 0;
 }
 
@@ -359,9 +394,10 @@ html{
 
 .project-card{
     background: #fff;
-    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
     transition: all 0.4s ease;
     cursor: pointer;
     display: flex;
@@ -495,7 +531,7 @@ html{
 .contact{
     width: 100%;
     padding: 60px 10%;
-    background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1f2937 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -693,19 +729,22 @@ html{
 /*Footer*/
 footer{
     width: 100%;
-    background-color: #181818;
-    padding: 50px 0;
-    color: #FFFFFF;
+    background: linear-gradient(135deg, #020617 0%, #111827 100%);
+    padding: 40px 20px;
+    color: #e2e8f0;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 footer a{
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 footer p{
     margin-left: 12px;
+    color: #94a3b8;
 }
 
 /* Responsividade - Tablets (768px) */

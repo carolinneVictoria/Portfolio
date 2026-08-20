@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.setAttribute('data-theme', stored || (prefersDark ? 'dark' : 'light'));
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+    <title>Página não encontrada • Carolinne Victória</title>
+    <meta name="description" content="Página não encontrada no portfólio de Carolinne Victória.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <h1>Portfólio</h1>
+        <ul class="nav-list">
+            <li><a href="index.html">Voltar ao início</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="not-found">
+            <img src="images/black-cat.png" alt="Ilustração de um gatinho preto, mascote do portfólio, parecendo confuso">
+            <h1>404</h1>
+            <h2>Ihh, essa página fugiu igual um gatinho assustado! 🐈‍⬛</h2>
+            <p>
+                Procurei em todas as pastas, mas essa página não existe (ou já se mudou de endereço).
+                Que tal voltar para um lugar que eu garanto que existe?
+            </p>
+            <a href="index.html">
+                <button type="button" class="call-to-action">
+                    Voltar para o início 🏠
+                </button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <h3><a href="index.html">Carolinne Victória</a></h3>
+        <p>Todos os direitos reservados!</p>
+    </footer>
+</body>
+
+</html>

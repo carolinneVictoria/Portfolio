@@ -4,310 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <title>Carolinne Victória</title>
+
+    <!-- Aplica o tema salvo (ou o preferido pelo sistema) antes da primeira pintura, evitando flash de tema errado. -->
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.setAttribute('data-theme', stored || (prefersDark ? 'dark' : 'light'));
+            } catch (error) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+
+    <title>Carolinne Victória • Desenvolvedora Full Stack</title>
+    <meta name="description" content="Portfólio de Carolinne Victória, desenvolvedora full stack com foco em aplicações web funcionais, organizadas e bem estruturadas. Conheça meus projetos, stack e trabalhos criativos.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://carolinnevictoria.github.io/Portfolio/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Carolinne Victória • Desenvolvedora Full Stack">
+    <meta property="og:description" content="Portfólio de Carolinne Victória, desenvolvedora full stack com foco em aplicações web funcionais, organizadas e bem estruturadas.">
+    <meta property="og:url" content="https://carolinnevictoria.github.io/Portfolio/">
+    <meta property="og:image" content="https://carolinnevictoria.github.io/Portfolio/images/profile.jpeg">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carolinne Victória • Desenvolvedora Full Stack">
+    <meta name="twitter:description" content="Portfólio de Carolinne Victória, desenvolvedora full stack com foco em aplicações web funcionais, organizadas e bem estruturadas.">
+    <meta name="twitter:image" content="https://carolinnevictoria.github.io/Portfolio/images/profile.jpeg">
+
+    <meta name="theme-color" content="#0f172a">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
     <!-- Inicio do Header-->
     <nav class="nav">
         <h1>Portfólio</h1>
-        <ul class="nav-list">
+
+        <button type="button" class="nav-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-list">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#stack">Stack</a></li>
+            <li><a href="#beyond-code">Criativo</a></li>
+            <li><a href="#contact">Contato</a></li>
             <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#about">Sobre</a>
-            </li>
-            <li>
-                <a href="#projects">Projetos</a>
-            </li>
-            <li>
-                <a href="#contact">Contato</a>
+                <button type="button" id="theme-toggle" aria-label="Alternar entre tema claro e escuro" aria-pressed="false">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
             </li>
         </ul>
     </nav>
-    <!-- Inicio do Main -->
-    <section class="main" id="home">
-        <div>
-            <div class="pet">
-                <img id="cat" src="images/black-cat.png" alt="bichinho fofo">
+
+    <main id="main-content">
+        <!-- Inicio do Main -->
+        <section class="main" id="home">
+            <div>
+                <div class="pet">
+                    <img id="cat" src="images/black-cat.png" alt="Ilustração de um gatinho preto, mascote do portfólio" width="100" height="100">
+                </div>
+                <p class="hero-badge">Full Stack Developer • Frontend • Backend</p>
+                <h1>
+                    Olá, eu sou a <span class="nome">Carolinne Victória</span>!
+                </h1>
+                <p class="hero-subtitle">Desenvolvimento full stack com foco em aplicações funcionais, organizadas <br>e bem estruturadas.</p>
+                <div class="hero-actions">
+                    <a href="#projects">
+                        <button type="button" class="call-to-action">
+                            Veja meus projetos👇
+                        </button>
+                    </a>
+                    <a href="#contact">
+                        <button type="button" class="call-to-action-two">
+                            Entre em contato!📩
+                        </button>
+                    </a>
+                </div>
             </div>
-            <p class="hero-badge">Full Stack Developer • Frontend • Backend</p>
-            <h1>
-                Olá, eu sou a <span class="nome">Carolinne Victória</span>!
-            </h1>
-            <p class="hero-subtitle">Desenvolvimento full stack com foco em aplicações funcionais, organizadas <br>e bem estruturadas.</p>
-            <div class="hero-actions">
-                <a href="#projects">
-                    <button type="button" class="call-to-action">
-                        Veja meus projetos👇
-                    </button>
+
+            <div class="social-icons">
+                <a href="https://github.com/carolinneVictoria" target="_blank" rel="noopener noreferrer" aria-label="Meu perfil no GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <a href="#contact">
-                    <button type="button" class="call-to-action-two">
-                        Entre em contato!📩
-                    </button>
+
+                <a href="https://www.linkedin.com/in/carolinne-victória-5b79a3236/" target="_blank" rel="noopener noreferrer" aria-label="Meu perfil no LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+
+                <a href="#contact" aria-label="Ir para a seção de contato">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
                 </a>
             </div>
-        </div>
+        </section>
 
-        <div class="social-icons">
-            <a href="https://github.com/carolinneVictoria" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
+        <!-- Sobre -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2>Sobre Mim</h2>
+                <p class="intro-text">
+                    Sou uma desenvolvedora apaixonada por criar soluções web funcionais e bem estruturadas. Atuo com
+                    desenvolvimento full stack, transitando entre frontend e backend, e gosto de transformar ideias em
+                    aplicações reais que fazem diferença — sempre com atenção à organização do código e à experiência
+                    de quem usa.
+                </p>
+                <p class="intro-text">
+                    Tenho interesse especial por interfaces bem cuidadas, boas práticas de acessibilidade e por unir
+                    tecnologia com um pouco do meu lado criativo.
+                </p>
 
-            <a href="https://www.linkedin.com/in/carolinne-victória-5b79a3236/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
-            <a href="#contact">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Area Sobre -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2>Sobre Mim</h2>
-            <p class="intro-text">
-                Sou uma desenvolvedora apaixonada por criar soluções web funcionais e bem estruturadas. Com experiência
-                em desenvolvimento full stack, transformo ideias em aplicações reais que fazem diferença.
-            </p>
-
-            <h3 class="skills-title">Minhas Tecnologias</h3>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h4>HTML5</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h4>CSS3</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-js-square"></i>
-                    <h4>JavaScript</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-react"></i>
-                    <h4>React</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-node-js"></i>
-                    <h4>Node.js</h4>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h4>TypeScript</h4>
-                </div>
-
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h4>PostgreSQL</h4>
-                </div>
-
-                <div class="skill-card">
-                    <i class="fas fa-leaf"></i>
-                    <h4>MongoDB</h4>
-                </div>
+                <h3 class="skills-title">Tecnologias com as quais trabalho</h3>
+                <ul class="about-tags" aria-label="Tecnologias principais">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                    <li>Git &amp; GitHub</li>
+                </ul>
             </div>
-        </div>
-        <div class="about-image">
-            <img src="images/profile.jpeg" alt="foto de menina sorrindo">
-        </div>
-    </section>
+            <div class="about-image">
+                <img src="images/profile.jpeg" alt="Foto de Carolinne Victória sorrindo" width="280" height="280" loading="lazy">
+            </div>
+        </section>
 
-    <!-- Projetos -->
-    <section class="projects" id="projects">
-        <div class="projects-header">
-            <h2>Meus Projetos</h2>
-            <p>Conheça alguns dos meus trabalhos recentes!</p>
-        </div>
-
-        <div class="carousel-container">
-            <button class="carousel-btn prev" onclick="moveCarousel(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-
-            <div class="projects-carousel">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/netflix.png" alt="Projeto 5">
-                        <div class="project-overlay">
-                            <a href="https://github.com/carolinneVictoria/imersao-frontend-netflix"
-                                class="project-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Netflix</h3>
-                        <p>Projeto desenvolvido durante a Imersão Front-End da Alura com o objetivo de recriar a
-                            interface de seleção de perfis da Netflix com uso de HTML, CSS e JavaScript com complemento
-                            do Github Copilot.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/openWeather.png" alt="Projeto 2">
-                        <div class="project-overlay">
-                            <a href="https://weather-motion-nu.vercel.app/" class="project-link">Ver
-                                Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Weather Motion</h3>
-                        <p>Weather Motion é uma aplicação de previsão do tempo desenvolvida em React e TypeScript, 
-                            com cenários ilustrados por mim que se adaptam dinamicamente ao clima e ao período do dia.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/pomodoro.png" alt="Projeto 1">
-                        <div class="project-overlay">
-                            <a href="https://react-pomodoro-todo-q512.vercel.app" class="project-link">Ver Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Pomodoro To Do</h3>
-                        <p>Aplicação de produtividade desenvolvida com React, TypeScript e Vite que integra um
-                            cronômetro baseado no Método Pomodoro com uma lista de tarefas, permitindo organizar
-                            atividades, gerenciar ciclos de foco e manter os dados salvos no navegador por meio do
-                            LocalStorage.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/sistemaespecialista.png" alt="Projeto 3">
-                        <div class="project-overlay">
-                            <a href="https://github.com/carolinneVictoria/Sistema_Especialista" class="project-link">Ver
-                                Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Sistema Especialista</h3>
-                        <p>Este projeto consiste no desenvolvimento de um sistema especialista com PyMc baseado em redes
-                            bayesianas para apoiar a tomada de decisão na aplicação de fungicidas na cultura da soja com
-                            uso de Python e Flask.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/gestao.png" alt="Projeto 4">
-                        <div class="project-overlay">
-                            <a href="https://github.com/carolinneVictoria/Projeto_Extensao" class="project-link">Ver
-                                Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Sistema de Gestão Bicicletaria</h3>
-                        <p>O projeto consiste no desenvolvimento de um sistema web para gestão de uma bicicletaria, com
-                            o objetivo de facilitar o controle das principais operações do negócio. A aplicação é
-                            construída em PHP, utilizando o padrão de arquitetura MVC.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/landingPage.png" alt="Projeto 5">
-                        <div class="project-overlay">
-                            <a href="https://carolinnevictoria.github.io/landing-pages" class="project-link">Ver
-                                Projeto</a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Landing Pages</h3>
-                        <p>Landing Pages desenvolvidas com HTML, CSS e JavaScript, com foco em acessibilidade, SEO e
-                            responsividade.</p>
-                    </div>
-                </div>
-
+        <!-- Projetos -->
+        <section class="projects" id="projects">
+            <div class="projects-header">
+                <h2>Meus Projetos</h2>
+                <p>Conheça alguns dos meus trabalhos recentes!</p>
             </div>
 
-            <button class="carousel-btn next" onclick="moveCarousel(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
+            <div class="project-filters" role="group" aria-label="Filtrar projetos por categoria">
+                <button type="button" class="project-filter-btn active" data-filter="all" aria-pressed="true">Todos</button>
+                <button type="button" class="project-filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+                <button type="button" class="project-filter-btn" data-filter="backend" aria-pressed="false">Backend</button>
+                <button type="button" class="project-filter-btn" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+            </div>
 
-        <a href="#contact" class="cta-button">Faça um Orçamento</a>
-    </section>
+            <div class="projects-grid" id="projects-grid"></div>
 
-    <!-- Contato -->
-    <section class="contact" id="contact">
-        <div class="contact-header">
-            <h2>Entre em Contato</h2>
-            <p>Tem uma ideia de projeto? Vamos conversar!</p>
-        </div>
+            <a href="#contact" class="cta-button">Faça um Orçamento</a>
+        </section>
 
-        <div class="contact-container">
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/carolinevictoria1224@gmail.com" method="POST">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
-                <input type="hidden" name="_template" value="table">
+        <dialog id="project-modal" class="project-modal" aria-labelledby="project-modal-title"></dialog>
 
-                <div class="form-group">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+        <!-- Stack -->
+        <section class="stack" id="stack">
+            <div class="section-header">
+                <h2>Stack</h2>
+                <p>Tecnologias e ferramentas que uso no dia a dia.</p>
+            </div>
+            <div class="stack-grid" id="stack-grid"></div>
+        </section>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+        <!-- Além do Código -->
+        <section class="beyond-code" id="beyond-code">
+            <div class="section-header">
+                <h2>Além do Código</h2>
+                <p>Também curto arte digital e ilustração. Aqui vai um pouco do meu lado criativo.</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
 
-                <div class="form-group">
-                    <label for="subject">Assunto</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
+        <dialog id="gallery-lightbox" class="gallery-lightbox" aria-label="Visualização ampliada da ilustração"></dialog>
 
-                <div class="form-group">
-                    <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="6" required></textarea>
-                </div>
+        <!-- Contato -->
+        <section class="contact" id="contact">
+            <div class="contact-header">
+                <h2>Entre em Contato</h2>
+                <p>Tem uma ideia de projeto? Vamos conversar!</p>
+            </div>
 
-                <button type="submit" class="submit-btn">Enviar Mensagem</button>
-                <p class="form-status" role="status" aria-live="polite"></p>
-            </form>
+            <div class="contact-container">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/carolinevictoria1224@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nova mensagem do portfólio">
+                    <input type="hidden" name="_template" value="table">
 
-            <div class="contact-info">
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p><a href="mailto:carolinevictoria1224@email.com">carolinevictoria1224@email.com</a></p>
-                </div>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                <div class="info-card">
-                    <i class="fab fa-linkedin"></i>
-                    <h3>LinkedIn</h3>
-                    <p><a href="https://www.linkedin.com/in/carolinne-victória-5b79a3236/" target="_blank">Meu
-                            LinkedIn</a></p>
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                <div class="info-card">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                    <p><a href="https://github.com/carolinneVictoria" target="_blank">Meu GitHub</a></p>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:carolinevictoria1224@email.com">carolinevictoria1224@email.com</a></p>
+                        <p id="copy-email-feedback" class="copy-email-feedback" role="status" aria-live="polite"></p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/carolinne-victória-5b79a3236/" target="_blank" rel="noopener noreferrer">Meu LinkedIn</a></p>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/carolinneVictoria" target="_blank" rel="noopener noreferrer">Meu GitHub</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Area do Rodape -->
     <footer>
         <h3>
-            <a href="#">Carolinne Victória</a>
+            <a href="#home">Carolinne Victória</a>
         </h3>
         <p>Todos os direitos reservados!</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

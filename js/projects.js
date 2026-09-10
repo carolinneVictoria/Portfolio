@@ -33,12 +33,21 @@ function projectCardTemplate(project) {
     `;
 }
 
-function renderProjects(grid, category) {
+const PROJECTS_PAGE_SIZE = 6;
+
+function renderProjects(grid, category, visibleCount) {
     const filtered = category === 'all' ? projects : projects.filter((p) => p.category === category);
-    grid.innerHTML = filtered.map(projectCardTemplate).join('');
+    grid.innerHTML = filtered.slice(0, visibleCount).map(projectCardTemplate).join('');
+
+    const loadMoreBtn = document.querySelector('.project-loadmore-btn');
+    if (loadMoreBtn) {
+        loadMoreBtn.hidden = visibleCount >= filtered.length;
+    }
+
+    return filtered.length;
 }
 
-function initFilters(grid) {
+function initFilters(grid, state) {
     const filterButtons = document.querySelectorAll('.project-filter-btn');
     if (!filterButtons.length) return;
 
@@ -50,8 +59,20 @@ function initFilters(grid) {
             });
             button.classList.add('active');
             button.setAttribute('aria-pressed', 'true');
-            renderProjects(grid, button.dataset.filter);
+            state.category = button.dataset.filter;
+            state.visibleCount = PROJECTS_PAGE_SIZE;
+            renderProjects(grid, state.category, state.visibleCount);
         });
+    });
+}
+
+function initLoadMore(grid, state) {
+    const loadMoreBtn = document.querySelector('.project-loadmore-btn');
+    if (!loadMoreBtn) return;
+
+    loadMoreBtn.addEventListener('click', () => {
+        state.visibleCount += PROJECTS_PAGE_SIZE;
+        renderProjects(grid, state.category, state.visibleCount);
     });
 }
 
@@ -137,8 +158,11 @@ export function initProjects() {
     const grid = document.getElementById('projects-grid');
     if (!grid) return;
 
-    renderProjects(grid, 'all');
-    initFilters(grid);
+    const state = { category: 'all', visibleCount: PROJECTS_PAGE_SIZE };
+
+    renderProjects(grid, state.category, state.visibleCount);
+    initFilters(grid, state);
+    initLoadMore(grid, state);
     initModal(grid);
 }
 

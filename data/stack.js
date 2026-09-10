@@ -27,6 +27,7 @@ export const stack = [
         items: [
             { name: 'SQL', icon: 'fas fa-table' },
             { name: 'MongoDB', icon: 'fas fa-leaf' },
+            { name: 'Prisma', icon: 'fas fa-cogs' },
         ],
     },
     {

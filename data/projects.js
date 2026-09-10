@@ -153,6 +153,52 @@ export const projects = [
         },
     },
     {
+        id: "devspace-auth",
+        name: "DevSpace Auth",
+        image: "images/devspace.png",
+        category: "fullstack",
+        featured: false,
+        shortDescription:
+            "Aplicação full-stack de registro e login, desenvolvida com Node.js nativo, React, Prisma e PostgreSQL.",
+
+        technologies: [
+            "Node.js",
+            "React",
+            "TypeScript",
+            "Prisma",
+            "Docker",
+        ],
+
+        demoUrl: null,
+        githubUrl: "https://github.com/carolinneVictoria/devspace-auth",
+
+        details: {
+            context:
+                "Projeto pessoal desenvolvido para praticar a construção e a integração de um fluxo de autenticação completo, do frontend ao banco de dados.",
+
+            problem:
+                "Compreender como implementar o cadastro e o login de usuários, garantindo a validação dos dados e o armazenamento seguro das senhas.",
+
+            solution:
+                "Desenvolvi uma aplicação com frontend em React e uma API construída com o módulo HTTP nativo do Node.js. Os dados são persistidos no PostgreSQL por meio do Prisma, e as senhas são protegidas com bcryptjs.",
+
+            features: [
+                "Cadastro de usuários",
+                "Login com validação de credenciais",
+                "Criptografia de senhas com bcryptjs",
+                "Validação de formulários com React Hook Form e Zod",
+                "Persistência de usuários no PostgreSQL",
+                "Banco de dados executado com Docker Compose",
+            ],
+
+            challenges:
+                "Estruturar uma API sem utilizar um framework HTTP e integrar corretamente o frontend, o backend e o banco de dados.",
+
+            learnings:
+                "Aprofundei meus conhecimentos sobre requisições HTTP, organização de uma API, validação de dados, proteção de senhas e integração full-stack.",
+        },
+    },
+    {
         id: 'landing-pages',
         name: 'Landing Pages',
         image: 'images/landingPage.png',

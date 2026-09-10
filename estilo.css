@@ -553,6 +553,26 @@ textarea:focus-visible,
     color: #fff;
 }
 
+.project-loadmore-btn{
+    cursor: pointer;
+    background: var(--surface);
+    border: 2px solid var(--surface-border);
+    color: var(--text-secondary);
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.project-loadmore-btn:hover,
+.project-loadmore-btn:focus-visible{
+    border-color: var(--accent-purple);
+    color: var(--accent-purple);
+    transform: translateY(-2px);
+}
+
 .projects-grid{
     width: 100%;
     max-width: 1100px;

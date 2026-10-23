@@ -19,4 +19,34 @@ export const artworks = [
         title: 'Princesa e Cavaleiro',
         description: 'Princesa e cavaleiro.',
     },
+    {
+        id: 'art-4',
+        image: 'images/art/dune.png',
+        title: 'Dune',
+        description: 'Dune.',
+    },
+    {
+        id: 'art-5',
+        image: 'images/art/fairy.png',
+        title: 'Fada',
+        description: 'Fada.',
+    },
+    {
+        id: 'art-6',
+        image: 'images/art/firePower.png',
+        title: 'Poder do Fogo',
+        description: 'Poder do Fogo.',
+    },
+    {
+        id: 'art-7',
+        image: 'images/art/alexy.png',
+        title: 'Alexy',
+        description: 'Alexy.',
+    },
+    {
+        id: 'art-8',
+        image: 'images/art/indianGirl.png',
+        title: 'Garota Indiana',
+        description: 'Garota Indiana.',
+    },
 ];

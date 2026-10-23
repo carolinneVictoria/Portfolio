@@ -224,6 +224,36 @@ export const projects = [
             learnings: 'Reforcei boas práticas de HTML semântico e acessibilidade que hoje aplico em todos os projetos.',
         },
     },
+    {
+        id: 'creative-lab',
+        name: 'Laboratório Criativo',
+        image: 'images/creativeLab.png',
+        category: 'frontend',
+        featured: false,
+        shortDescription:
+            'Laboratório de arte generativa que utiliza algoritmos para criar composições abstratas personalizáveis, combinando formas, cores e padrões.',
+        technologies: ['React', 'TypeScript', 'Tailwind CSS', 'SVG'],
+        demoUrl: 'https://criative-lab-navy.vercel.app/',
+        githubUrl: 'https://github.com/carolinneVictoria/creative-lab',
+        details: {
+            context:
+                'Projeto pessoal desenvolvido para explorar a interseção entre programação, algoritmos e criatividade visual.',
+            problem:
+                'Criar composições visuais abstratas de forma flexível, permitindo experimentar diferentes combinações de formas, cores e tamanhos.',
+            solution:
+                'Desenvolvi uma aplicação interativa que utiliza algoritmos de geração procedural para criar composições artísticas personalizáveis.',
+            features: [
+                'Geração procedural de composições abstratas',
+                'Personalização de formas, tamanhos e cores',
+                'Pré-visualização das criações na interface',
+                'Exportação das composições em imagem',
+            ],
+            challenges:
+                'Desenvolver algoritmos capazes de gerar composições visuais variadas, mantendo o controle sobre os parâmetros e a organização dos elementos.',
+            learnings:
+                'Explorei a aplicação de algoritmos na criação visual, a renderização de gráficos vetoriais e o desenvolvimento de interfaces criativas com React e TypeScript.',
+        },
+    },
 ];
 
 export function getProjectById(id) {

@@ -182,7 +182,16 @@
                 <h2>Além do Código</h2>
                 <p>Também curto arte digital e ilustração. Aqui vai um pouco do meu lado criativo.</p>
             </div>
-            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="gallery-carousel" role="region" aria-label="Carrossel de artes">
+                <button type="button" class="gallery-control" id="gallery-previous" aria-label="Artes anteriores">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="gallery-grid" id="gallery-grid"></div>
+                <button type="button" class="gallery-control" id="gallery-next" aria-label="Próximas artes">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                <span class="gallery-status" id="gallery-status" aria-live="polite"></span>
+            </div>
         </section>
 
         <dialog id="gallery-lightbox" class="gallery-lightbox" aria-label="Visualização ampliada da ilustração"></dialog>
